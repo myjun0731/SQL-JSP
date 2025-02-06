@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 	<h2>회원 정보 리스트</h2>
 	<table border="1">
 		<tr>
