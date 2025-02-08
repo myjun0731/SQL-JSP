@@ -41,14 +41,15 @@
 			<td><a href="Delete.jsp?id=<%=jdbc.rs.getString("id")%>"
 				onclick="return confirm('정말 삭제하시겠습니까?');">[삭제]</a></td>
 		</tr>
+		<%
+		}
+		%>
 		<tr>
 			<td colspan="5"><input type="button" value="모두 삭제"
 				onclick="location.href='AllDelete.jsp'"></td>
 		</tr>
 
-
 		<%
-		}
 		} catch (Exception e) {
 		%>
 		<tr>
