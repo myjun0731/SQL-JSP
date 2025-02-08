@@ -1,5 +1,6 @@
 <%@page import="common.JDBC"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -37,22 +38,25 @@
 			<td><%=jdbc.rs.getString("name")%></td>
 			<td><%=jdbc.rs.getString("phone")%></td>
 			<td><%=jdbc.rs.getString("grade")%></td>
-			<td>
-				<a href="Delete.jsp?id=<%=jdbc.rs.getString("id")%>" 
-				   onclick="return confirm('정말 삭제하시겠습니까?');">[삭제]</a>
-			</td>
+			<td><a href="Delete.jsp?id=<%=jdbc.rs.getString("id")%>"
+				onclick="return confirm('정말 삭제하시겠습니까?');">[삭제]</a></td>
+		</tr>
+		<tr>
+			<td colspan="5"><input type="button" value="모두 삭제"
+				onclick="location.href='AllDelete.jsp'"></td>
 		</tr>
 
+
 		<%
-			}
+		}
 		} catch (Exception e) {
 		%>
 		<tr>
-			<td colspan="5" style="color: red;">데이터를 불러오는 중 오류 발생: <%= e.getMessage() %></td>
+			<td colspan="5" style="color: red;">데이터를 불러오는 중 오류 발생: <%=e.getMessage()%></td>
 		</tr>
 		<%
 		} finally {
-			jdbc.close();
+		jdbc.close();
 		}
 		%>
 	</table>
@@ -82,17 +86,16 @@
 				<td><input type="text" name="grade" required></td>
 			</tr>
 			<tr>
-				<td colspan="2">
-					<input type="submit" value="등록">
-					<input type="button" value="모두 삭제" onclick="location.href='AllDelete.jsp'">
-				</td>
+				<td colspan="2"><input type="submit" value="등록"></td>
 			</tr>
 		</table>
 	</form>
 	<%
 	} catch (Exception e) {
 	%>
-	<p style="color: red;">회원 등록 폼을 로드하는 중 오류 발생: <%= e.getMessage() %></p>
+	<p style="color: red;">
+		회원 등록 폼을 로드하는 중 오류 발생:
+		<%=e.getMessage()%></p>
 	<%
 	}
 	%>
