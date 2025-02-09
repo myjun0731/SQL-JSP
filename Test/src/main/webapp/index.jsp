@@ -45,8 +45,9 @@
 		}
 		%>
 		<tr>
-			<td colspan="5"><input type="button" value="모두 삭제"
-				onclick="location.href='AllDelete.jsp'"></td>
+			<td colspan="5"><a onclick="return confirm('정말 모두 삭제하시겠습니까?');">
+					<input type="button" value="모두 삭제" onclick="location.href='AllDelete.jsp'"> </a>
+			</td>
 		</tr>
 
 		<%
