@@ -10,14 +10,9 @@
 <title>회원 관리 시스템</title>
 </head>
 <body>
-	<header>
-		<h2>회원 정보 리스트</h2>
-	</header>
-	<nav>
-		<a href="">회원등록</a> <a href="">회원삭제</a> <a href="">회원수정</a> <a href="">홈으로</a>
-	</nav>
+<jsp:include page="Header.jsp"></jsp:include>
 	<section>
-		<h3>List</h3>
+		<h3>회원 삭제</h3>
 		<!-- 회원 목록 출력 -->
 		<table border="1">
 			<tr>
@@ -71,45 +66,6 @@
 			}
 			%>
 		</table>
-
-		<!-- 회원 등록 폼 -->
-		<h3>회원 등록</h3>
-
-		<%
-		try {
-		%>
-		<form action="Input.jsp" method="post">
-			<table border="1">
-				<tr>
-					<td>ID</td>
-					<td><input type="text" name="id" required></td>
-				</tr>
-				<tr>
-					<td>이름</td>
-					<td><input type="text" name="name" required></td>
-				</tr>
-				<tr>
-					<td>전화번호</td>
-					<td><input type="text" name="phone" required></td>
-				</tr>
-				<tr>
-					<td>등급</td>
-					<td><input type="text" name="grade" required></td>
-				</tr>
-				<tr>
-					<td colspan="2"><input type="submit" value="등록"></td>
-				</tr>
-			</table>
-		</form>
-		<%
-		} catch (Exception e) {
-		%>
-		<p style="color: red;">
-			회원 등록 폼을 로드하는 중 오류 발생:
-			<%=e.getMessage()%></p>
-		<%
-		}
-		%>
 	</section>
 </body>
 </html>

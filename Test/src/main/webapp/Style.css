@@ -21,6 +21,7 @@ header h2 {
 
 nav {
 	position: fixed;
+	text-align: center;
 	top: 40px;
 	width: 100%;
 	height: 20px;
@@ -30,8 +31,8 @@ nav {
 
 nav a {
 	display: inline-block;
-	text-align: left;
-	margin-left: 12px;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 section {
