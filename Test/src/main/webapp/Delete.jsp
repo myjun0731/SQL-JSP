@@ -21,7 +21,7 @@
 
 	jdbc.close();
 
-	response.sendRedirect("index.jsp");
+	response.sendRedirect("U_Delete.jsp");
 	%>
 </body>
 </html>

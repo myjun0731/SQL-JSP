@@ -10,7 +10,7 @@
 <title>회원 관리 시스템</title>
 </head>
 <body>
-<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
 		<h3>회원 삭제</h3>
 		<!-- 회원 목록 출력 -->
@@ -53,7 +53,6 @@
 						onclick="location.href='AllDelete.jsp'">
 				</a></td>
 			</tr>
-
 			<%
 			} catch (Exception e) {
 			%>
