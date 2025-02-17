@@ -17,7 +17,7 @@
 		<h3>회원 등록</h3>
 
 		<%
-		try {
+		try { 
 		%>
 		<form action="Input.jsp" method="post">
 			<table border="1">
