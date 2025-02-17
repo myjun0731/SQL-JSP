@@ -23,19 +23,19 @@
 			<table border="1">
 				<tr>
 					<td>ID</td>
-					<td><input type="text" name="id" required></td>
+					<td><input type="text" name="id" required placeholder="(3자 이상)"></td>
 				</tr>
 				<tr>
 					<td>이름</td>
-					<td><input type="text" name="name" required></td>
+					<td><input type="text" name="name" required placeholder="(NAME)"></td>
 				</tr>
 				<tr>
 					<td>전화번호</td>
-					<td><input type="text" name="phone" required></td>
+					<td><input type="text" name="phone" required placeholder="(형식 : 010-0000-0000)"></td>
 				</tr>
 				<tr>
 					<td>등급</td>
-					<td><input type="text" name="grade" required></td>
+					<td><input type="text" name="grade" required placeholder="(1자) [Ex) 'A']"></td>
 				</tr>
 				<tr>
 					<td colspan="2"><input type="submit" value="등록"></td>
