@@ -1,5 +1,5 @@
 <%@ page import="java.sql.*"%>
-<%@page import="common.JDBC"%>
+<%@ page import="common.JDBC"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,33 +11,56 @@
 </head>
 <body>
 
-<jsp:include page="Header.jsp"></jsp:include>
+	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
 		<!-- 회원 등록 폼 -->
 		<h3>회원 등록</h3>
 
 		<%
-		try { 
+		try {
+			// 요청 파라미터가 있는 경우에만 세션에 값을 저장합니다.
+			String id = request.getParameter("id");
+			String name = request.getParameter("name");
+			String phone = request.getParameter("phone");
+			String grade = request.getParameter("grade");
+
+			// 값이 존재하면 세션에 저장 (예: 폼 제출 후)
+			if (id != null && name != null && phone != null && grade != null) {
+				session.setAttribute("ID", request.getParameter("id"));
+				session.setAttribute("name", request.getParameter("name"));
+				session.setAttribute("phone", request.getParameter("phone"));
+				session.setAttribute("grade", request.getParameter("grade"));
+			}
 		%>
 		<form action="Input.jsp" method="post">
 			<table border="1">
 				<tr>
 					<td>ID</td>
-					<td><input type="text" name="id" required placeholder="(3자 이상)"></td>
+					<td><input type="text" name="id" required
+						placeholder="(3자 이상)"></td>
 				</tr>
 				<tr>
 					<td>이름</td>
-					<td><input type="text" name="name" required placeholder="(NAME)"></td>
+					<td><input type="text" name="name" required
+						placeholder="(NAME)"></td>
 				</tr>
 				<tr>
 					<td>전화번호</td>
-					<td><input type="text" name="phone" required placeholder="(형식 : 010-0000-0000)"></td>
+					<td><input type="text" name="phone" required
+						placeholder="(형식 : 010-0000-0000)"></td>
 				</tr>
 				<tr>
 					<td>등급</td>
-					<td><input type="text" name="grade" required placeholder="(1자) [Ex) 'A']"></td>
+					<td><input type="text" name="grade" required
+						placeholder="(1자) [Ex) 'A']"></td>
 				</tr>
 				<tr>
+					<%
+					session.setAttribute("id", request.getParameter("id"));
+					session.setAttribute("name", request.getParameter("name"));
+					session.setAttribute("phone", request.getParameter("phone"));
+					session.setAttribute("grade", request.getParameter("grade"));
+					%>
 					<td colspan="2"><input type="submit" value="등록"></td>
 				</tr>
 			</table>
@@ -47,7 +70,8 @@
 		%>
 		<p style="color: red;">
 			회원 등록 폼을 로드하는 중 오류 발생:
-			<%=e.getMessage()%></p>
+			<%=e.getMessage()%>
+		</p>
 		<%
 		}
 		%>
