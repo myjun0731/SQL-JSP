@@ -6,6 +6,17 @@ grade char(1)
 );
 
 insert into member_02 values(01,'김행복','010-1111-2222','A');
-insert into member_02 values(02,'이축복','010-1111-3333','B');
-insert into member_02 values(03,'장믿음','010-1111-4444','A');
-insert into member_02 values(04,'최사랑','010-1111-5555','B');
+
+
+--U_change.jsp & U_Delete.jsp
+SELECT * FROM member_02
+
+--E_AllDelete.jsp & E_Delete.jsp
+DELETE FROM member_02
+DELETE member_02 where id = ?
+
+--E_change.jsp
+UPDATE member_02 SET name = ?, phone = ?, grade = ? WHERE id = ?
+
+--E_Input.jsp
+insert into member_02 values(?,?,?,?)

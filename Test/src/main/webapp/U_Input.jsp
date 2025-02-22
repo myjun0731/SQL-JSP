@@ -13,10 +13,11 @@
 
 	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
-		<!-- 회원 등록 폼 -->
 		<h3>회원 등록</h3>
 
 		<%
+		request.setCharacterEncoding("UTF-8");
+
 		try {
 			// 요청 파라미터가 있는 경우에만 세션에 값을 저장합니다.
 			String id = request.getParameter("id");
@@ -32,7 +33,7 @@
 				session.setAttribute("grade", request.getParameter("grade"));
 			}
 		%>
-		<form action="Input.jsp" method="post">
+		<form action="E_Input.jsp" method="post">
 			<table border="1">
 				<tr>
 					<td>ID</td>

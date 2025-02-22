@@ -10,15 +10,11 @@
 <body>
 	<%
 	request.setCharacterEncoding("UTF-8");
-	String id = request.getParameter("id");
-
-	String sql = "DELETE member_02 where id = ?";
-
+	
+	String sql = "DELETE FROM member_02";
 	JDBC jdbc = new JDBC();
 	jdbc.pstmt = jdbc.conn.prepareStatement(sql);
-	jdbc.pstmt.setString(1, id);
 	jdbc.pstmt.executeQuery();
-
 	jdbc.close();
 
 	response.sendRedirect("U_Delete.jsp");

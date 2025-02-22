@@ -12,11 +12,11 @@
 <body>
 	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
-		<!-- 회원 등록 폼 -->
 		<h3>회원 정보 변경</h3>
 
 		<%
 		request.setCharacterEncoding("UTF-8");
+		
 		String ID = request.getParameter("id");
 		String NAME = request.getParameter("name");
 		String PHONE = request.getParameter("phone");
@@ -24,7 +24,7 @@
 		JDBC jdbc = new JDBC();
 		try {
 		%>
-		<form action="change.jsp?id=<%=ID%>" method="post">
+		<form action="E_change.jsp?id=<%=ID%>" method="post">
 			<table border="1">
 				<tr>
 					<td>ID</td>

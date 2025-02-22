@@ -13,7 +13,6 @@
 	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
 		<h3>회원 삭제</h3>
-		<!-- 회원 목록 출력 -->
 		<table border="1">
 			<tr>
 				<th>ID</th>
@@ -24,8 +23,8 @@
 			</tr>
 
 			<%
-			// 데이터베이스 연결 및 조회
 			request.setCharacterEncoding("UTF-8");
+			
 			JDBC jdbc = new JDBC();
 			String sql = "SELECT * FROM member_02";
 
@@ -50,7 +49,7 @@
 			<tr>
 				<td colspan="5"><a onclick="return confirm('정말 모두 삭제하시겠습니까?');">
 						<input type="button" value="모두 삭제"
-						onclick="location.href='AllDelete.jsp'">
+						onclick="location.href='E_AllDelete.jsp'">
 				</a></td>
 			</tr>
 			<%

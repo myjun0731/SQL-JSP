@@ -10,6 +10,7 @@
 <body>
 	<%
 	request.setCharacterEncoding("UTF-8");
+	
 	String id = request.getParameter("id");
 	String name = request.getParameter("name");
 	String phone = request.getParameter("phone");
@@ -26,7 +27,6 @@
 		jdbc.pstmt.setString(4, id);
 
 		int updateCount = jdbc.pstmt.executeUpdate();
-		// 업데이트 성공 시 세션에 수정된 정보를 갱신
 		if (updateCount > 0) {
 			session.setAttribute("name", name);
 			session.setAttribute("phone", phone);

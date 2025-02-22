@@ -13,6 +13,7 @@
 	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
 		<h3>홈</h3>
+		
 	</section>
 </body>
 </html>

@@ -13,7 +13,6 @@
 	<jsp:include page="Header.jsp"></jsp:include>
 	<section>
 		<h3>회원 정보 변경</h3>
-		<!-- 회원 목록 출력 -->
 		<table border="1">
 			<tr>
 				<th>ID</th>
@@ -24,8 +23,8 @@
 			</tr>
 
 			<%
-			// 데이터베이스 연결 및 조회
 			request.setCharacterEncoding("UTF-8");
+			
 			JDBC jdbc = new JDBC();
 			String sql = "SELECT * FROM member_02";
 
@@ -42,7 +41,7 @@
 				<td><%=jdbc.rs.getString("phone")%></td>
 				<td><%=jdbc.rs.getString("grade")%></td>
 				<td><a
-					href="change2.jsp?id=<%=jdbc.rs.getString("id")%>&name=<%=jdbc.rs.getString("name")%>&phone=<%=jdbc.rs.getString("phone")%>&grade=<%=jdbc.rs.getString("grade")%>">[변경]</a></td>
+					href="E_change_Input.jsp?id=<%=jdbc.rs.getString("id")%>&name=<%=jdbc.rs.getString("name")%>&phone=<%=jdbc.rs.getString("phone")%>&grade=<%=jdbc.rs.getString("grade")%>">[변경]</a></td>
 			</tr>
 			<%
 			}
