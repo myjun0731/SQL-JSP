@@ -40,7 +40,7 @@
 				<td><%=jdbc.rs.getString("name")%></td>
 				<td><%=jdbc.rs.getString("phone")%></td>
 				<td><%=jdbc.rs.getString("grade")%></td>
-				<td><a href="Delete.jsp?id=<%=jdbc.rs.getString("id")%>"
+				<td><a href="E_Delete.jsp?id=<%=jdbc.rs.getString("id")%>"
 					onclick="return confirm('정말 삭제하시겠습니까?');">[삭제]</a></td>
 			</tr>
 			<%
