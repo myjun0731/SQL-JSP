@@ -38,22 +38,22 @@
 				<tr>
 					<td>ID</td>
 					<td><input type="text" name="id" required
-						placeholder="(3자 이상)"></td>
+						placeholder="ID"></td>
 				</tr>
 				<tr>
 					<td>이름</td>
 					<td><input type="text" name="name" required
-						placeholder="(NAME)"></td>
+						placeholder="NAME"></td>
 				</tr>
 				<tr>
 					<td>전화번호</td>
 					<td><input type="text" name="phone" required
-						placeholder="(형식 : 010-0000-0000)"></td>
+						placeholder="형식 : 010-0000-0000"></td>
 				</tr>
 				<tr>
 					<td>등급</td>
 					<td><input type="text" name="grade" required
-						placeholder="(1자) [Ex) 'A']"></td>
+						placeholder="[Ex) 'A']"></td>
 				</tr>
 				<tr>
 					<%
